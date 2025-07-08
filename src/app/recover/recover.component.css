@@ -1,0 +1,48 @@
+.forgot-password-container {
+    max-width: 400px;
+    margin: auto;
+    background: #e1e7ebd1;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgb(0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+input {
+    width: 89%;
+    padding: 10px 12px 10px 32px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 120%;
+    margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+    
+}
+
+button {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.error {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+.success {
+    margin-top: 1rem;
+    color: green;
+}
+
+.back-ling {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #6c2bd9;
+    text-decoration: none;
+}

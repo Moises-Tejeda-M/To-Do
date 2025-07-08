@@ -1,0 +1,71 @@
+body {
+  /* background: linear-gradient(to bottom right, #eef3ff, #faf6ff); */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+.todo-app {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.todo-app h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.todo-app h1 .icon {
+  font-size: 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #7f5af0e4, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  color: #0e0e0e;
+  margin-bottom: 2rem;
+}
+
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+}.icono {
+  font-size: 1.2rem;
+}

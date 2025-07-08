@@ -1,0 +1,46 @@
+
+<div class="form-container">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h2>Iniciar sesion</h2>
+        <p>Ingresa tus credenciales para acceder a tus tareas</p>
+
+        <label>
+            Correo electronico
+            <div class="input-icon">
+                <span class="icon">📧</span>
+                <input type="email" formControlName="email" placeholder="tu@gmail.com" />
+            </div>
+        </label>
+
+        <label>
+            Contraseña
+            <div class="input-icon">
+                <span class="icon">🔒</span>
+                <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Tu contraseña" />
+                <span class="toggle-eye" (click)="togglePassword()">👁️</span>
+            </div>
+        </label>
+        
+        <button type="submit" class="submit-btn">Iniciar sesion</button>
+
+        <div class="links">
+            <a routerLink="/recover">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        
+
+        <div class="no-account">
+            <p>No tienes cuenta?</p>
+            
+            <button type="button" class="create-account-btn" routerLink="/regist">Crear cuenta</button>
+        </div>
+
+        <div class="divider">O</div>
+
+        <div class="social-buttons">
+            <button type="button" class="social google">G google</button>
+            <button type="button" class="social facebook">f Facebook</button>
+        </div>
+    </form>
+</div>

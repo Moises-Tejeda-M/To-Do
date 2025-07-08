@@ -1,0 +1,166 @@
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    background: #e1e7ebd1;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgb(0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #6c2bd9;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    text-align: center;
+    color: #585858;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: blocck;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #131313;
+}
+
+.input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon input {
+    width: 100%;
+    padding: 10px 12px 10px 32px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 120%;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+.toggle-eye:active{
+    background-color: #6c2bd9;
+}
+
+.lins {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px;
+    font-size: 13px;
+}
+
+.links a {
+    color: #6c2bd9;
+    text-decoration: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #14ee60;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(29, 117, 15, 0.4);
+}
+
+.submit-btn:hover {
+    background: #10dd1e;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0 10px;
+    font-size: 13px;
+    color: #676666;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.social {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+}
+
+.social.google {
+    color: #db4437;
+}
+.social.facebook {
+    color: #1877f2;
+}
+
+.back-link {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.no-account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.create-account-btn {
+    background-color: transparent;
+    border: 2px solid #6c2bd9;
+    color: #6c2bd9;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0,3s ease;
+    font-size: 14px;
+}
+
+.create-account-btn:hover {
+    background-color: #6c2bd9;
+    color: white;
+}

@@ -1,0 +1,97 @@
+
+<div class="input-card">
+    <input type="text" [(ngModel)]="newTask" (keydown.enter)="addTask()" placeholder="Que necesitas hacer hoy?" />
+
+    <button (click)="addTask()">Agregar</button>
+</div>
+
+    <div class="metrics">
+  <div class="card blue">
+    <div class="icon-container">
+      <i class="fas fa-list"></i>
+    </div>
+    <strong>{{ totalCount }}</strong>
+    <span>Total</span>
+  </div>
+
+  <div class="card orange">
+    <div class="icon-container">
+      <i class="fas fa-clock"></i>
+    </div>
+    <strong>{{ pendingCount }}</strong>
+    <span>Pendientes</span>
+  </div>
+
+  <div class="card green">
+    <div class="icon-container">
+      <i class="fas fa-check"></i>
+    </div>
+    <strong>{{ completedCount }}</strong>
+    <span>Completadas</span>
+  </div>
+
+  <div class="card purple">
+    <div class="icon-container">
+      <i class="fas fa-percent"></i>
+    </div>
+    <strong>{{ progressPercentage | round }}%</strong>
+    <span>Progreso</span>
+  </div>
+</div>
+
+<div class="filters">
+  <button (click)="setFilter('all')" [class.active]="filter === 'all'" class="Tbutton">
+    Todas
+  </button>
+  <button (click)="setFilter('completed')" [class.active]="filter === 'completed'" class="Tbutton">
+    Completadas
+  </button>
+  <button (click)="setFilter('pending')" [class.active]="filter === 'pending'" class="Tbutton">
+    Pendientes
+  </button>
+
+  
+  <button (click)="eliminateCompletedTasks()" *ngIf="hasCompletedTasks" class="clear-button">
+    Limpiar completadas
+  </button>
+
+</div>
+
+<div class="container-task">
+    <ul class="task-list">
+        @for (t of filteredTasks; track t.id; let i = $index) {
+        <li>
+            <div class="task-content">
+              <div class="main-task">
+                @if (!t.editing) {
+                  <input type="checkbox" [(ngModel)]="t.filled" (click)="toggleFilled(i)">
+                  
+                    <span [class.filled]="t.filled" (click)="toggleFilled(i)" style="cursor: pointer;"
+            >
+            {{ t.text }}
+            </span>
+                } @else {
+                    <input type="text" [(ngModel)]="t.text"
+                    (blur)="saveEdit(i)"
+                    (keydown.enter)="saveEdit(i)"
+                    class="edit-task-input"/>
+                }
+            </div>
+
+            <div class="date">
+                <p>Creado: {{ t.createdAt | dateHour:'dd/MM/yy' }}</p>
+            </div>
+            </div>
+            
+                <div class="actions">
+                    <i class="fas fa-pen" (click)="editTask(i)"></i>
+                    <i class="fas fa-trash" (click)="eliminateTask(i)"></i>
+                </div>
+        </li>
+    }
+
+    @empty {
+        <p class="empty">Comienza a organizarte!<br />Agrega tu primera tarea</p>
+    }
+    </ul>
+</div>

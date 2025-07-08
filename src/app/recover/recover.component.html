@@ -1,0 +1,23 @@
+<div class="forgot-password-container">
+    <a routerLink="/login" class="back-link">← Volver al inicio</a>
+    <h2>¿Olvidaste tu contraseña?</h2>
+
+    <form [formGroup]="forgotForm" (ngSubmit)="onSubmit()">
+    <label for="email">Correo electronico</label>
+    <input type="email" id="email" formControlName="email" (input)="clearMessage()" />
+
+   
+
+    <button type="submit">Enviar enlace</button>
+</form>
+
+ <div *ngIf="submitted && forgotForm.controls['email'].invalid" class="error">
+        <span *ngIf="forgotForm.controls['email'].errors?.['required']">El correo es requerido</span>
+        <span *ngIf="forgotForm.controls['email'].errors?.['email']">Correo invalido</span>
+        <span *ngIf="forgotForm.controls['email'].errors?.['notFound']">Este correo no esta registrado</span>
+    </div>
+
+<p *ngIf="emailSent" class="success">
+    Se ha Enviado un enlace de recuperacion a tu correo
+</p>
+</div>

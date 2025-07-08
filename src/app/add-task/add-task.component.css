@@ -1,0 +1,391 @@
+/*
+.input-card {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10%;
+}
+
+.input-card input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.input-card button {
+  background: linear-gradient(45deg, #3f87f5, #9c5fff);
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.metrics {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Colores por tarjeta */
+/*
+.card.blue .icon-container {
+  background-color: #e0f0ff;
+  color: #3b82f6;
+}
+
+.card.orange .icon-container {
+  background-color: #fff7e6;
+  color: #f97316;
+}
+
+.card.green .icon-container {
+  background-color: #e6f9f0;
+  color: #22c55e;
+}
+
+.card.purple .icon-container {
+  background-color: #f5e8ff;
+  color: #a855f7;
+}
+
+strong {
+  font-size: 20px;
+  margin: 4px 0;
+}
+
+span {
+  color: #777;
+  font-size: 14px;
+}
+
+.filters {
+  margin-top: 16px;
+}
+
+.Tbutton {
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Tbutton.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.task-list li {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.task-list li:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.task-list li span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  
+}
+
+.task-list li .actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-list li .actions i {
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.task-list li .actions i:hover {
+  color: #000;
+}
+
+.task-list li .date {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Estilo para subrayar el texto de tareas completadas */
+/*
+.filled {
+  text-decoration: line-through;
+  color: #888;
+}
+*/ 
+
+/* Estilo general */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  /* background: #f0f4ff; */
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Input y botón principal */
+.input-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #e1e7ebd1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.input-card input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.input-card button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #377dff, #a64ced);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Métricas */
+.metrics {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.card {
+  flex: 1;
+  background: #e1e7ebd1;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card .icon-container {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Colores personalizados */
+.card.blue .icon-container {
+  color: #377dff;
+}
+
+.card.orange .icon-container {
+  color: #ffa500;
+}
+
+.card.green .icon-container {
+  color: #28c76f;
+}
+
+.card.purple .icon-container {
+  color: #a64ced;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.Tbutton {
+  padding: 0.6rem 1.2rem;
+  background: #e1e7ebd1;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.Tbutton.active {
+  background: linear-gradient(90deg, #ff7300, #fda13e);
+  color: white;
+}
+
+.Tbutton:hover {
+  background: #377dffcd;
+}
+
+/* Lista de tareas */
+.container-task {
+  background: #e1e7ebd1;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.container-task {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px; 
+   margin-top: 1rem; 
+
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.task-list li:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.task-content {
+  display: flex;
+  flex-direction: column; /* Esto apila elementos verticalmente */
+  align-items: flex-start;
+  gap: 0.25rem;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.task-content input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.task-content span {
+  font-size: 1.1rem;
+}
+
+.task-content .filled {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.main-task {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actions i {
+  margin-left: 1rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.actions i:hover {
+  color: #d00;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Mensaje vacío */
+.empty {
+  text-align: center;
+  color: #777;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.clear-button {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.clear-button:hover {
+  background: #e60000;
+}
+
+.edit-task-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: inherit;
+  color: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.edit-task-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}

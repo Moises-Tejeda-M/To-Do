@@ -1,0 +1,41 @@
+<div class="form-container">
+    <a routerLink="/login" class="back-link">← Volver al inicio</a>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h2>Crear cuenta</h2>
+        <p>completa el formulario para crear tu cuenta</p>
+
+        <label>
+            Nombre completo
+            <input type="text" placeholder="Nombre completo" formControlName="fullName" />
+        </label>
+
+        <label>
+            Correo electronico
+            <input type="email" placeholder="Correo electronico" formControlName="email" />
+        </label>
+
+        <label>
+            contraseña
+            <input type="password" placeholder="Contraseña" formControlName="password" />
+        </label>
+
+        <label>
+            Confirmar contraseña
+            <input type="password" placeholder="Confirmar contraseña" formControlName="confirmPassword" />
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox" formControlName="acceptTerms" />
+            Acepto los terminos y condiciones
+        </label>
+
+        <!-- Boton para enviar el formulario -->
+         <button type="submit">Crear cuenta</button>
+
+         <p class="login-link">
+            Ya tienes una cuenta?
+            <a routerLink="/login">Inicia sesion aqui</a>
+         </p>
+    </form>
+</div>
