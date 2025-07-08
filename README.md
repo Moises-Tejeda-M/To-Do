@@ -25,7 +25,6 @@ Esta es una aplicacion web desarrollada con Angular para gestionar tareas de for
 - ✅ Marcar tareas como completadas
 - 🗑️ Eliminar tareas
 - 🔍 Filtrar por estado: todas / completadas / pendientes
-- 🌗 Cambiar entre modo claro y oscuro
 - 💾 Guardar los datos en `localStorage`
 
 🚀 Tecnologías utilizadas
