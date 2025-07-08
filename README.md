@@ -1,59 +1,44 @@
-# ToDoApp
+## 📝 To-Do App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+Esta es una aplicacion web desarrollada con Angular para gestionar tareas de forma intuitiva. Incluye autenticacion, recuperarcion de contraseñam visualizacion de tareas, filtros por estado y seguimiento del progreso, todo persistido con localStorage
 
-## Development server
+🔐 1. Inicio de sesión
 
-To start a local development server, run:
+![image Alt](https://github.com/Moises-Tejeda-M/To-Do/blob/55adfadf71a2bb7748f77f2f429eaaa8351a0dca/Screenshot%202025-07-07%20231446.png)
 
-```bash
-ng serve
-```
+🧾 2. Crear cuenta
+![image Alt](https://github.com/Moises-Tejeda-M/To-Do/blob/55adfadf71a2bb7748f77f2f429eaaa8351a0dca/Screenshot%202025-07-07%20231434.png)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🔑 3. Recuperar contraseña
+![image Alt](https://github.com/Moises-Tejeda-M/To-Do/blob/dee82682b356b8428dd4824ebd4486bb16814439/Screenshot%202025-07-08%20002529.png)
 
-## Code scaffolding
+📋 4. Pantalla principal del To-Do
+![image Alt](https://github.com/Moises-Tejeda-M/To-Do/blob/dee82682b356b8428dd4824ebd4486bb16814439/Screenshot%202025-07-07%20231809.png)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+✅ 5. Gestión de tareas: pendientes, completadas y 📊progreso
+![image Alt](https://github.com/Moises-Tejeda-M/To-Do/blob/dee82682b356b8428dd4824ebd4486bb16814439/Screenshot%202025-07-07%20231839.png)
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---------------------------
+  
+- ➕ Agregar nuevas tareas
+- ✅ Marcar tareas como completadas
+- 🗑️ Eliminar tareas
+- 🔍 Filtrar por estado: todas / completadas / pendientes
+- 🌗 Cambiar entre modo claro y oscuro
+- 💾 Guardar los datos en `localStorage`
 
-```bash
-ng generate --help
-```
+🚀 Tecnologías utilizadas
 
-## Building
+- Angular
 
-To build the project run:
+- TypeScript
 
-```bash
-ng build
-```
+- HTML & CSS
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Angular Forms
 
-## Running unit tests
+- LocalStorage
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Routing
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
